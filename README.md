@@ -32,8 +32,10 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 fminunc(@(t)(costFunction(t, X, y)), initial theta, options);
 ```
 'GradObj', 'on': set fminunc that our function returns both the cost and the gradient. 
-This allows fminunc to use the gradient when minimizing the function. Furthermore, we set the
+This allows fminunc to use the gradient when minimizing the function.
+
 'MaxIter', 400: set fminunc run for at most 400 steps before it terminates.
+
 @(t) ( costFunction(t, X, y) ): specify the actual function we are minimizing, creates a function, 
 with argument t, which calls your costFunction.
 
